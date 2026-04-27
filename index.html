@@ -15,8 +15,8 @@
 
       --bg: #05030a;
       /* deep violet space */
-      --surface: #0b0615;
-      --surface-2: #140a24;
+      --surface: #020617;
+      --surface-2: #020617;
 
       --fg: #f5eaff;
       /* soft lavender-white */
@@ -25,14 +25,12 @@
       --border: #1a1033;
       --border-strong: #2a1a4a;
 
-      --accent: #c084fc;
-      /* lavender glow */
-      --accent-strong: #f472b6;
-      /* pink highlight */
+      --accent: #DFC5FE;
+      --accent-strong: #F4BBFF;
 
-      --bubble-user: #7c3aed;
-      /* purple bubble */
-      --bubble-user-fg: #f3e8ff;
+      --bubble-user: rgba(223, 197, 254, 0.15);
+      /* subtle tint */
+      --bubble-user-fg: #F4BBFF;
 
       --bubble-assistant: #0b0615;
 
@@ -139,7 +137,7 @@
       padding: .75rem 1rem;
       background: var(--bg);
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.08);
+      box-shadow: 0 0 20px rgba(223, 197, 254, 0.12);
     }
 
     .menu-toggle {
@@ -223,13 +221,15 @@
 
     .msg.user {
       align-self: flex-end;
-      background: var(--bubble-user);
-      color: var(--bubble-user-fg);
+      background: rgba(223, 197, 254, 0.12);
+      /* VERY soft */
+      color: #F4BBFF;
+      border: 1px solid rgba(204, 204, 255, 0.2);
     }
 
     .msg.assistant {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid rgba(223, 197, 254, 0.2);
       backdrop-filter: blur(6px);
     }
 
@@ -595,9 +595,9 @@
       margin: 0;
       color: var(--fg);
       text-shadow:
-        0 0 10px rgba(192, 132, 252, 0.8),
-        0 0 30px rgba(244, 114, 182, 0.4),
-        0 0 60px rgba(192, 132, 252, 0.2);
+        0 0 10px rgba(223, 197, 254, 0.6),
+        0 0 25px rgba(244, 187, 255, 0.3),
+        0 0 50px rgba(204, 204, 255, 0.2);
     }
 
     .hero-tagline {
@@ -639,16 +639,16 @@
       flex: 1;
       padding: .6rem .7rem;
       border-radius: 10px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      background: rgba(10, 20, 40, 0.6);
-      color: var(--fg);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid rgba(204, 204, 255, 0.2);
+      color: #DFC5FE;
+      box-shadow: 0 0 8px rgba(223, 197, 254, 0.1);
       backdrop-filter: blur(6px);
     }
 
     form.composer input:focus {
       outline: none;
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 12px rgba(244, 187, 255, 0.25);
     }
 
 
@@ -656,14 +656,20 @@
       padding: .6rem 1.1rem;
       border: 0;
       border-radius: 10px;
-      background: linear-gradient(135deg, #a855f7, #f472b6);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
-      color: white;
+      background: rgba(223, 197, 254, 0.15);
+      border: 1px solid #DFC5FE;
+      color: #F4BBFF;
+      box-shadow: 0 0 8px rgba(244, 187, 255, 0.2);
     }
 
     form.composer button:disabled {
       background: #475569;
       cursor: not-allowed;
+    }
+
+
+    form.composer button:hover {
+      background: rgba(244, 187, 255, 0.2);
     }
 
     footer {
